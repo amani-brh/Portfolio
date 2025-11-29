@@ -1,4 +1,4 @@
-import { ArrowRight, ExternalLink, Github } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 const projects = [
   {
     id: 1,
@@ -7,8 +7,7 @@ const projects = [
       "Étude complète du tablier d’un pont de type VIPP, incluant modélisation, analyse structurale et vérification selon les normes en vigueur.",
     image: "/projects/Tablier.jpeg",
     tags: ["Structures", "Ponts", "VIPP"],
-    demoUrl: "#",
-    githubUrl: "#",
+    
   },
   {
     id: 2,
@@ -17,8 +16,7 @@ const projects = [
       "Analyse et vérification de différents assemblages boulonnés conformément à l’Eurocode 3, incluant calculs des efforts, contrôles de résistance et modélisation.",
     image: "/projects/assemblages.jpeg",
     tags: ["Eurocode 3", "Acier", "Assemblages"],
-    demoUrl: "#",
-    githubUrl: "#",
+    
   },
   {
     id: 3,
@@ -27,8 +25,7 @@ const projects = [
       "Conception et dimensionnement d’un bâtiment industriel (forme trapézoïdale) dédié à la filtration d'acide phosphorique, selon les Eurocodes et principes de construction métallique.",
     image: "/projects/EUROCODES.jpeg",
     tags: ["Eurocodes", "Construction métallique", "Bâtiments industriels"],
-    demoUrl: "#",
-    githubUrl: "#",
+    
   },
 ];
 
@@ -83,15 +80,13 @@ export const ProjectsSection = () => {
                       target="_blank"
                       className="text-foreground/80 hover:text-primary transition-colors duration-300"
                     >
-                      <ExternalLink size={20} />
-                    </a>
+                     </a>
                     <a
                       href={project.githubUrl}
                       target="_blank"
                       className="text-foreground/80 hover:text-primary transition-colors duration-300"
                     >
-                      <Github size={20} />
-                    </a>
+                     </a>
                   </div>
                 </div>
               </div>

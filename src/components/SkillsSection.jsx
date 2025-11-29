@@ -70,24 +70,23 @@ export const SkillsSection = () => {
     (skill) => activeCategory === "all" || skill.category === activeCategory
   );
 
+
   // eslint-disable-next-line react/prop-types
   const SkillIcon = ({ skill }) => {
     // eslint-disable-next-line react/prop-types
     const iconUrl = skillIcons[skill.name];
     // eslint-disable-next-line react/prop-types
     const FallbackIcon = categoryIcons[skill.category];
+    const [imageError, setImageError] = useState(false);
 
-    if (iconUrl) {
+    if (iconUrl && !imageError) {
       return (
         <img 
           src={iconUrl} 
           // eslint-disable-next-line react/prop-types
           alt={skill.name}
           className="w-12 h-12 object-contain"
-          onError={(e) => {
-            e.target.style.display = 'none';
-            e.target.nextSibling.style.display = 'flex';
-          }}
+          onError={() => setImageError(true)}
         />
       );
     }

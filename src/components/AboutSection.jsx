@@ -24,7 +24,7 @@ export const AboutSection = () => {
             <p className="text-muted-foreground">
               Je développe mes compétences à travers des projets académiques, des stages et une participation active à des clubs.
               Je maîtrise AutoCAD, RSA, QGIS, IDEA StatiCa, ainsi que plusieurs outils d’analyse structurelle et de modélisation.
-              Rigoureuse, organisée et dotée d'un fort esprit analytique, je suis motivée par la recherche de solutions techniques efficaces et innovantes.
+              Rigoureuse, organisée et dotée d&apos;un fort esprit analytique, je suis motivée par la recherche de solutions techniques efficaces et innovantes.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
@@ -86,10 +86,13 @@ export const AboutSection = () => {
                 </div>
                 <div className="text-left">
                   <h4 className="font-semibold text-lg">Expérience Professionnelle</h4>
-                  <p className="text-muted-foreground">
-                    Stage ingénieur chez TECI : conception et calcul d’un bâtiment métallique selon les Eurocodes.
-                    Stage ouvrier au projet de rénovation de la piscine municipale du Belvédère.
-                  </p>
+                    <p className="text-muted-foreground">
+                      <strong>Stage Ingénieur – TECI (Juillet 2025 – Août 2025) :</strong>
+                      Conception et calcul d’un bâtiment métallique selon les Eurocodes.
+                      <br /><br />
+                      <strong>Stage Ouvrier – SBF (Août 2024) :</strong>
+                      Participation au projet de rénovation de la piscine municipale du Belvédère.
+                    </p>
                 </div>
               </div>
             </div>
