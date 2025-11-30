@@ -88,9 +88,11 @@ export const AboutSection = () => {
                   <h4 className="font-semibold text-lg">Expérience Professionnelle</h4>
                     <p className="text-muted-foreground">
                       <strong>Stage Ingénieur – TECI (Juillet 2025 – Août 2025) :</strong>
+                      <br></br>
                       Conception et calcul d’un bâtiment métallique selon les Eurocodes.
                       <br /><br />
                       <strong>Stage Ouvrier – SBF (Août 2024) :</strong>
+                      <br />
                       Participation au projet de rénovation de la piscine municipale du Belvédère.
                     </p>
                 </div>
