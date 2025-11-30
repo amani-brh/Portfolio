@@ -1,4 +1,4 @@
-import { GraduationCap } from "lucide-react";
+import { GraduationCap, FileText } from "lucide-react";
 
 const academicProjects = [
   {
@@ -7,6 +7,7 @@ const academicProjects = [
     description:
       "Étude complète d'un bâtiment métallique de type halle : modélisation, descentes de charges, dimensionnement et vérification selon l'Eurocode 3.",
     tags: ["Eurocode 3", "Structure métallique", "Modélisation"],
+    pdfUrl: null,
   },
   {
     id: 6,
@@ -14,6 +15,7 @@ const academicProjects = [
     description:
       "Analyse géométrique, modélisation et étude technique d'un échangeur autoroutier dans le cadre du projet Tunis–Jelma.",
     tags: ["Infrastructure", "Autoroutes", "Géotechnique"],
+    pdfUrl: "/rapports/Projet de synthèse Amani Ferdaws .pdf",
   },
   {
     id: 7,
@@ -21,6 +23,7 @@ const academicProjects = [
     description:
       "Conception d'une base de données dédiée aux caractéristiques environnementales des matériaux de construction tunisiens et importés.",
     tags: ["Base de données", "Matériaux", "Environnement"],
+    pdfUrl: null,
   },
   {
     id: 8,
@@ -28,6 +31,7 @@ const academicProjects = [
     description:
       "Application des techniques d'auscultation ultrasonique pour l'évaluation non destructive des matériaux, détection des fissures et caractérisation mécanique.",
     tags: ["Auscultation", "NDT", "Matériaux"],
+    pdfUrl: "/rapports/Projet 1 auscultation ultra-sonique.pdf",
   },
   {
     id: 9,
@@ -35,6 +39,7 @@ const academicProjects = [
     description:
       "Implémentation et résolution de modèles d'optimisation non linéaire appliqués aux structures et systèmes complexes.",
     tags: ["Optimisation", "Mathématiques", "Programmation"],
+    pdfUrl: null,
   },
   {
     id: 10,
@@ -42,6 +47,7 @@ const academicProjects = [
     description:
       "Participation au suivi technique et aux étapes de rénovation de la piscine municipale du Belvédère.",
     tags: ["Chantier", "Rénovation", "Génie civil"],
+    pdfUrl: null,
   },
   {
     id: 11,
@@ -49,6 +55,7 @@ const academicProjects = [
     description:
       "Calcul et conception d'une fondation profonde basée sur des micropieux, incluant le dimensionnement et la répartition des charges.",
     tags: ["Géotechnique", "Micropieux", "Fondations"],
+    pdfUrl: "/rapports/Sujet 4 Réparation par Micropieux.pdf",
   },
   {
     id: 12,
@@ -56,6 +63,7 @@ const academicProjects = [
     description:
       "Conception et calcul d'un bâtiment métallique selon les Eurocodes dans le cadre du stage ingénieur.",
     tags: ["Stage", "Eurocodes", "Structure métallique"],
+    pdfUrl: "/rapports/Rapport de stage TECI -Amani Barhoumi.pdf",
   },
 ];
 
@@ -81,7 +89,7 @@ export const AcademicProjectsSection = () => {
               key={project.id}
               className="bg-card rounded-lg p-6 shadow-xs card-hover border-l-4 border-primary/50 hover:border-primary transition-all duration-300"
             >
-              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+              <div className="flex flex-col gap-4">
                 <div className="flex-1">
                   <h3 className="text-xl font-semibold mb-2 text-foreground">
                     {project.title}
@@ -89,7 +97,10 @@ export const AcademicProjectsSection = () => {
                   <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
                     {project.description}
                   </p>
-                  <div className="flex flex-wrap gap-2">
+                </div>
+                
+                <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+                  <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
                     {project.tags.map((tag, index) => (
                       <span
                         key={index}
@@ -99,6 +110,18 @@ export const AcademicProjectsSection = () => {
                       </span>
                     ))}
                   </div>
+                  
+                  {project.pdfUrl && (
+                    <a
+                      href={project.pdfUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors duration-300 text-sm font-medium whitespace-nowrap"
+                    >
+                      <FileText className="w-4 h-4" />
+                      View Report
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
@@ -106,7 +129,7 @@ export const AcademicProjectsSection = () => {
         </div>
       </div>
 
-     
+   
     </section>
   );
 };
