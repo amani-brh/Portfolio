@@ -1,4 +1,5 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight,  } from "lucide-react";
+
 const projects = [
   {
     id: 1,
@@ -7,7 +8,6 @@ const projects = [
       "Étude complète du tablier d’un pont de type VIPP, incluant modélisation, analyse structurale et vérification selon les normes en vigueur.",
     image: "/projects/Tablier.jpeg",
     tags: ["Structures", "Ponts", "VIPP"],
-    
   },
   {
     id: 2,
@@ -16,18 +16,26 @@ const projects = [
       "Analyse et vérification de différents assemblages boulonnés conformément à l’Eurocode 3, incluant calculs des efforts, contrôles de résistance et modélisation.",
     image: "/projects/assemblages.jpeg",
     tags: ["Eurocode 3", "Acier", "Assemblages"],
-    
   },
   {
     id: 3,
     title: "Conception et calcul d’un bâtiment de filtration d’acide phosphorique",
     description:
-      "Conception et dimensionnement d’un bâtiment industriel (forme trapézoïdale) dédié à la filtration d'acide phosphorique, selon les Eurocodes et principes de construction métallique.",
+      "Conception et dimensionnement d’un bâtiment industriel (forme trapézoïdale) dédié à la filtration d'acide phosphorique selon les Eurocodes.",
     image: "/projects/EUROCODES.jpeg",
     tags: ["Eurocodes", "Construction métallique", "Bâtiments industriels"],
-    
   },
+  {
+    id: 4,
+    title: "Étude des Assemblages sous IDEA StatiCa",
+    description:
+      "Exportation de modèles depuis Robot Structural Analysis vers IDEA StatiCa et vérification avancée des assemblages métalliques.",
+    image: "/projects/Etudes des assemblages avec le logiciel IDEA StatiCa (Exportation du modèle depuis RSA).jpg",
+    tags: ["IDEA StatiCa", "Assemblages", "RSA"],
+  },
+
 ];
+
 
  
 
