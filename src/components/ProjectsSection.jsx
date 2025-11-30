@@ -1,4 +1,4 @@
-import { ArrowRight,  } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const projects = [
   {
@@ -21,36 +21,34 @@ const projects = [
     id: 3,
     title: "Conception et calcul d’un bâtiment de filtration d’acide phosphorique",
     description:
-      "Conception et dimensionnement d’un bâtiment industriel (forme trapézoïdale) dédié à la filtration d'acide phosphorique selon les Eurocodes.",
+      "Conception et dimensionnement d’un bâtiment industriel (forme trapézoïdale) dédié à la filtration d’acide phosphorique selon les Eurocodes.",
     image: "/projects/EUROCODES.jpeg",
     tags: ["Eurocodes", "Construction métallique", "Bâtiments industriels"],
   },
   {
     id: 4,
-    title: "Étude des Assemblages sous IDEA StatiCa",
+    title: "Étude des assemblages sous IDEA StatiCa",
     description:
       "Exportation de modèles depuis Robot Structural Analysis vers IDEA StatiCa et vérification avancée des assemblages métalliques.",
-    image: "/projects/Etudes des assemblages avec le logiciel IDEA StatiCa (Exportation du modèle depuis RSA).jpg",
+    image:
+      "/projects/Etudes des assemblages avec le logiciel IDEA StatiCa (Exportation du modèle depuis RSA).jpg",
     tags: ["IDEA StatiCa", "Assemblages", "RSA"],
   },
-
 ];
-
-
- 
 
 export const ProjectsSection = () => {
   return (
     <section id="projects" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-5xl">
+        
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-          {" "}
-          Featured <span className="text-primary"> Projects </span>
+          Projets <span className="text-primary">Mise en Avant</span>
         </h2>
 
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Here are some of my recent projects. Each project was carefully
-          crafted with attention to detail, performance, and user experience.
+          Voici quelques-uns de mes récents projets. Chacun a été réalisé avec 
+          sérieux, précision et une attention particulière aux performances 
+          et aux exigences techniques.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -70,33 +68,22 @@ export const ProjectsSection = () => {
               <div className="p-6">
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag) => (
-                    // eslint-disable-next-line react/jsx-key
-                    <span className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
+                    <span
+                      className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground"
+                      key={tag}
+                    >
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                <h3 className="text-xl font-semibold mb-1"> {project.title}</h3>
+                <h3 className="text-xl font-semibold mb-1">
+                  {project.title}
+                </h3>
+
                 <p className="text-muted-foreground text-sm mb-4">
                   {project.description}
                 </p>
-                <div className="flex justify-between items-center">
-                  <div className="flex space-x-3">
-                    <a
-                      href={project.demoUrl}
-                      target="_blank"
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    >
-                     </a>
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    >
-                     </a>
-                  </div>
-                </div>
               </div>
             </div>
           ))}
@@ -108,9 +95,10 @@ export const ProjectsSection = () => {
             target="_blank"
             href="https://github.com/amani-brh"
           >
-            Check My Github <ArrowRight size={16} />
+            Voir mon GitHub <ArrowRight size={16} />
           </a>
         </div>
+
       </div>
     </section>
   );

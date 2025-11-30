@@ -1,8 +1,17 @@
 import { GraduationCap, FileText } from "lucide-react";
 
 const academicProjects = [
+    
   {
-    id: 5,
+    id: 1,
+    title: "Stage Ingénieur – TECI",
+    description:
+      "Conception et calcul d'un bâtiment métallique selon les Eurocodes dans le cadre du stage ingénieur.",
+    tags: ["Stage", "Eurocodes", "Structure métallique"],
+    pdfUrl: "/rapports/Rapport de stage TECI -Amani Barhoumi.pdf",
+  },
+  {
+    id: 2,
     title: "Conception et Dimensionnement d'un Bâtiment Métallique – Halle",
     description:
       "Étude complète d'un bâtiment métallique de type halle : modélisation, descentes de charges, dimensionnement et vérification selon l'Eurocode 3.",
@@ -10,7 +19,7 @@ const academicProjects = [
     pdfUrl: null,
   },
   {
-    id: 6,
+    id: 3,
     title: "Development and Study of the Zaghouan Interchange – Tunis–Jelma Highway",
     description:
       "Analyse géométrique, modélisation et étude technique d'un échangeur autoroutier dans le cadre du projet Tunis–Jelma.",
@@ -18,7 +27,7 @@ const academicProjects = [
     pdfUrl: "/rapports/Projet de synthèse Amani Ferdaws .pdf",
   },
   {
-    id: 7,
+    id: 4,
     title: "Élaboration d'une Base de Données – Matériaux de Construction Tunisiens",
     description:
       "Conception d'une base de données dédiée aux caractéristiques environnementales des matériaux de construction tunisiens et importés.",
@@ -26,7 +35,7 @@ const academicProjects = [
     pdfUrl: null,
   },
   {
-    id: 8,
+    id: 5,
     title: "Auscultation Ultrasonique",
     description:
       "Application des techniques d'auscultation ultrasonique pour l'évaluation non destructive des matériaux, détection des fissures et caractérisation mécanique.",
@@ -34,7 +43,7 @@ const academicProjects = [
     pdfUrl: "/rapports/Projet 1 auscultation ultra-sonique.pdf",
   },
   {
-    id: 9,
+    id:  6,
     title: "Non Linear Programming",
     description:
       "Implémentation et résolution de modèles d'optimisation non linéaire appliqués aux structures et systèmes complexes.",
@@ -42,7 +51,7 @@ const academicProjects = [
     pdfUrl: null,
   },
   {
-    id: 10,
+    id: 7,
     title: "Projet de Rénovation de la Piscine Municipale du Belvédère",
     description:
       "Participation au suivi technique et aux étapes de rénovation de la piscine municipale du Belvédère.",
@@ -50,21 +59,13 @@ const academicProjects = [
     pdfUrl: null,
   },
   {
-    id: 11,
+    id: 8,
     title: "Répartition par Micropieux",
     description:
       "Calcul et conception d'une fondation profonde basée sur des micropieux, incluant le dimensionnement et la répartition des charges.",
     tags: ["Géotechnique", "Micropieux", "Fondations"],
     pdfUrl: "/rapports/Sujet 4 Réparation par Micropieux.pdf",
-  },
-  {
-    id: 12,
-    title: "Stage Ingénieur – TECI",
-    description:
-      "Conception et calcul d'un bâtiment métallique selon les Eurocodes dans le cadre du stage ingénieur.",
-    tags: ["Stage", "Eurocodes", "Structure métallique"],
-    pdfUrl: "/rapports/Rapport de stage TECI -Amani Barhoumi.pdf",
-  },
+  }
 ];
 
 export const AcademicProjectsSection = () => {
@@ -74,13 +75,13 @@ export const AcademicProjectsSection = () => {
         <div className="flex items-center justify-center gap-3 mb-4">
           <GraduationCap className="w-8 h-8 text-primary" />
           <h2 className="text-3xl md:text-4xl font-bold text-center">
-            Academic <span className="text-primary">Projects</span>
+            Projets <span className="text-primary">Académiques</span>
           </h2>
         </div>
 
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          A collection of academic projects completed during my engineering studies, 
-          showcasing research, analysis, and technical expertise across various civil engineering domains.
+          Une collection de projets académiques réalisés lors de mes études d&apos;ingénieur, 
+          mettant en avant la recherche, l&apos;analyse et l&apos;expertise technique dans divers domaines du génie civil.
         </p>
 
         <div className="space-y-6">
@@ -119,7 +120,7 @@ export const AcademicProjectsSection = () => {
                       className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors duration-300 text-sm font-medium whitespace-nowrap"
                     >
                       <FileText className="w-4 h-4" />
-                      View Report
+                      Voir le rapport
                     </a>
                   )}
                 </div>
